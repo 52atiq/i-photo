@@ -9,7 +9,7 @@ const Service = ({service}) => {
          navigate(`/service/${id}`)
     }
     return (
-        <div className="col">
+        <div className="col mb-5">
     <div className="card h-100">
       <img style={{height:'200px'}} src= {image} className="card-img-top" alt="..."/>
       <div className="card-body">

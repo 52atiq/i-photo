@@ -5,6 +5,7 @@ import Home from './components/Pages/Home/Home/Home'
 import Footer from './components/Pages/Shared/Footer/Footer';
 // import ServiceDetail from './components/Pages/ServiceDetail/ServiceDetail';
 import ServiceDetail from './components/Pages/ServiceDetail/ServiceDetail'
+import Login from './components/Pages/Auth/Login/Login';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/' element={ <Home> </Home> }> </Route>
       {/* <Route path='/service/:serviceId' element={<ServiceDetail> </ServiceDetail>}> </Route> */}
       <Route path='/service/:serviceId' element={<ServiceDetail> </ServiceDetail>}></Route>
+      <Route path='/login' element={<Login> </Login>}></Route>
     </Routes>
      <Footer> </Footer>
     </>
