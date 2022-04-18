@@ -1,31 +1,58 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import{ Link }from 'react-router-dom'
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../../../../Firebase/firebase.init";
 
 const Login = () => {
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
+  const navigate = useNavigate();
+
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+  if(user){
+    navigate('/home')
+  }
+
+  const handleSubmit = (event) =>{
+   event.preventDefault();
+   const email = emailRef.current.value;
+   const password = passwordRef.current.value;
+  //  console.log(email, password);
+  signInWithEmailAndPassword(email, password)
+  }
+
+  const navigateRegister = event =>{
+    navigate('/register');
+  }
+
   return (
-    <div className="w-25 mx-auto mt-5">
-        <h2 className="text-center mb-3">Login</h2>
-      <Form>
+    <div className="container w-50 mx-auto">
+      <h2 className="text-center mt-3">Login</h2>
+      <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          
-          <Form.Control type="email" placeholder="Enter email" />
-         
+          <Form.Label>Email address</Form.Label>
+          <Form.Control ref={emailRef} type="email" placeholder="Enter email"  required/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-         
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>Password</Form.Label>
+          <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
         </Form.Group>
-        
-        <div className="d-flex justify-content-between">
-            {/* <Link> New member?</Link> */}
-            <p className="" to='/registration'>New member? </p>
-            <Button variant="primary" type="submit"> Login </Button>
-        </div>
-    
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="Check me out" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
       </Form>
-      
+      <p>New to I-PHOTO? <Link to='/register' className="text-danger text-decoration-none" onClick={navigateRegister}>Please Register </Link></p>
     </div>
   );
 };
