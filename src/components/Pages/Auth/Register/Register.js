@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../../../../Firebase/firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Register.css'
 const Register = () => {
@@ -14,13 +15,15 @@ const Register = () => {
      const [updateProfile, updating, updateError] = useUpdateProfile(auth);
        
        
-      
-     
-
     const navigate = useNavigate();
     const navigateLogin = () =>{
         navigate('/login')
     }
+    if(loading || updating){
+        return <Loading> </Loading>
+    }
+
+
     if(user){
         // navigate('/home')
         console.log('user', user);

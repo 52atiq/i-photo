@@ -4,11 +4,16 @@ import { useNavigate } from "react-router-dom";
 import google from '../../../../assets/Social/goole-one .png'
 import github from '../../../../assets/Social/github-one .png'
 import { auth } from "../../../../Firebase/firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, userGithub, loadingGithub, errorGithub] = useSignInWithGithub(auth);
      const navigate = useNavigate();
    let errorElement;
+      
+    if(loading || loadingGithub){
+      return <Loading> </Loading>
+    }
 
     if (error || errorGithub) {
       
@@ -31,16 +36,18 @@ const SocialLogin = () => {
       </div>
       {errorElement}
       <div>
+          <div className="">
           <button
           onClick={ () => signInWithGoogle()}
-           className="btn btn-warning w-50 d-block mx-auto my-2">
-             <img  src={google} alt="" />
-             <span className="px-2 text-white">  Google Sign In </span>
+           className=" btn btn-warning w-50 d-block mx-auto my-2 font-medium ">
+             {/* <img  src={google} alt="" /> */}
+             <span className="text-white">  Google Sign In </span>
           </button>
+          </div>
           <button
           onClick={ () => signInWithGithub()}
            className="btn btn-warning w-50 d-block mx-auto">
-             <img  src={github} alt="" />
+             {/* <img  src={github} alt="" /> */}
              <span className="px-2 text-white">  Github Sign In </span>
           </button>
       </div>
