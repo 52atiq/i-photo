@@ -18,8 +18,8 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h5> I wil take your photo professionally</h5>
+           
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -30,8 +30,8 @@ const Banner = () => {
           />
   
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h5> You can Hire me as a professional photographer</h5>
+            
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -42,10 +42,8 @@ const Banner = () => {
           />
   
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h5>I will your photo deliver on time </h5>
+            
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
