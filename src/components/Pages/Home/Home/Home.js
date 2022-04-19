@@ -6,7 +6,7 @@ import Services from '../Services/Services';
 
 const Home = () => {
     return (
-        <div className='container'>
+        <div className=''>
             {/* <Header> </Header> */}
             <Banner> </Banner>
             <Services> </Services>
