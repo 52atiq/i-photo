@@ -44,8 +44,8 @@ const Register = () => {
     }
 
     return (
-        
-        <div className='register-form'>
+        <div className='mt-20'>
+        <div className='register-form '>
            <h2 className='text-center'> Register </h2>
               
                <form onSubmit={handleRegister}>
@@ -66,6 +66,7 @@ const Register = () => {
                 <p>Already have an account? <Link to='/login' className="text-primary text-decoration-none" onClick={navigateLogin}> Login</Link></p>
                 <SocialLogin> </SocialLogin>
            
+        </div>
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className="container">
+    <div className="container mt-28">
          <h4 className="mt-5 mb-3"> Q1: Difference between and authentication authorization :</h4>
       <div className="flex sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 justify-center gap-x-8 gap-y-4  ">
          

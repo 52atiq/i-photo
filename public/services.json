@@ -4,20 +4,20 @@
       "name": "Basic",
       "price": "200",
       "image": "https://i.ibb.co/6BPGkD0/devin-justesen-y-Zhdh-Ifly-AU-unsplash.jpg",
-      "description": "I will take your photos with pictures views of Dhaka also any where in BD and deliver professionally edited shots, will also share my favourite spots for coffee and delicious street food"
+      "description": "I will take your photos with pictures views of Dhaka  and this package is time limited 5 hours maximum 50 pictures"
     },
     {
       "id": "2",
       "name": "Delux",
       "price": "300",
       "image": " https://i.ibb.co/9H1mMJG/markus-voetter-Sd-RS39-Xlt4-Q-unsplash.jpg",
-      "description":"I will take your photos with pictures views of Dhaka also any where in BD and deliver professionally edited shots, will also share my favourite spots for coffee and delicious street food"
+      "description":" This package works for one day you can maximum 200 pictures and deliver in one week "
     },
     {
       "id": "3",
       "name": "Ultimate",
       "price": "600",
       "image": "https://i.ibb.co/BNFjK3v/zhao6927-IGAd-Me2-LHcc-unsplash.jpg",
-      "description": "I will take your photos with pictures views of Dhaka also any where in BD and deliver professionally edited shots, will also share my favourite spots for coffee and delicious street food"
+      "description": " You wii get unlimited pictures as you want for one day also you will get  best edited version with different quality and deliver in 24 hours  "
     }
   ]
